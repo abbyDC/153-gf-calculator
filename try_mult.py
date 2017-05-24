@@ -1,5 +1,5 @@
-a=21
-b=15
+a=6
+b=21
 
 def pad_poly(poly,len_a,len_b):
 	pad = len_a - len_b
@@ -17,7 +17,7 @@ a=list(bin(a)[2:])
 b=list(bin(b)[2:])
 a=[int(n) for n in a]
 b=[int(n) for n in b]
-c=[1,1,0,1,1,1]
+c=[1,0,1,1,1,1]
 #pad-left binary representation according to the longest number
 if len(a)>len(b):
 	b = pad_poly(b,len(a),len(b))
@@ -38,7 +38,8 @@ temp = int(''.join(map(str,temp)),2)
 temp= list(bin(temp)[2:])
 temp=[int(n) for n in temp]
 temp_c=c
-while(len(temp)>=len(c)):
+len_c=len(c)
+while(len(temp)>=len_c):
 	temp_c=c
 	temp_c.extend("0"*(len(temp)-len(temp_c)))
 	temp_c=[int(n) for n in temp_c]

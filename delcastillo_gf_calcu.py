@@ -248,6 +248,17 @@ if len(a_input)>len(b_input):
 else:
 	a_input = pad_poly(a_input,len(b_input),len(a_input))
 
+max_value=2**(len(c_input)-1)
+for x in a_input:
+	if (x >= max_value):
+		f=raw_input("One of the coefficients is greater than the limit set by the P(x)")
+		exit()
+
+for x in b_input:
+	if (x >= max_value):
+		f=raw_input("One of the coefficients is greater than the limit set by the P(x)")
+		exit()
+
 operation = 0
 while(operation<1 or operation>4):
 	print "Choose an operation you want to perform:"

@@ -322,4 +322,4 @@ elif operation == 4:
 	print_output("B(x) =",b_input)
 	print_output("A(x) / B(x) =",result[0])
 	print_output("remainder =",result[1])
-
+last = raw_input("Press enter to exit the program")
